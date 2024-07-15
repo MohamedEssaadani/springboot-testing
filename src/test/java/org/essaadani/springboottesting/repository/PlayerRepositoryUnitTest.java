@@ -24,7 +24,7 @@ class PlayerRepositoryUnitTest {
 
     @Test
     void shouldReturnOnePlayer() {
-        Player playerToFind = new Player("Eden", "HAZARD", PlayerPosition.LW.name());
+        Player playerToFind = new Player(null, "Eden", "HAZARD", PlayerPosition.LW);
 
         // given
         when(playerRepository.findById(1L)).thenReturn(Optional.of(playerToFind));
