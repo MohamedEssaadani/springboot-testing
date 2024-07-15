@@ -5,8 +5,11 @@ import org.essaadani.springboottesting.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PlayerServiceImpl implements PlayerService {
+
     @Autowired
     PlayerRepository playerRepository;
 
@@ -33,5 +36,10 @@ public class PlayerServiceImpl implements PlayerService {
     @Override
     public void deleteAll() {
         playerRepository.deleteAll();
+    }
+
+    @Override
+    public List<Player> findAll() {
+        return playerRepository.findAll();
     }
 }

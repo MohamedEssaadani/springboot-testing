@@ -2,6 +2,8 @@ package org.essaadani.springboottesting.service;
 
 import org.essaadani.springboottesting.entity.Player;
 
+import java.util.List;
+
 public interface PlayerService {
     Player savePlayer(Player player);
 
@@ -12,4 +14,6 @@ public interface PlayerService {
     void deletePlayer(Long id);
 
     void deleteAll();
+
+    List<Player> findAll();
 }
